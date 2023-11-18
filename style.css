@@ -1,0 +1,186 @@
+body{
+    background-color: rgb(155, 18, 93);
+    color: white;
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: rgb(250, 250, 250);
+}
+
+.Images{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+.player img{
+    height: 250px;
+    
+}
+.computer  img{
+    height: 250px;
+}
+.points{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 30px;
+    font-size: 2rem;
+
+}
+.comName{
+    font-weight: 600;
+}
+.plyName{
+    font-weight: 600; 
+}
+.computerPoints{
+    margin-left: 2rem;
+    margin-right: 5px;
+}
+.playerPoints{
+    margin-right: 2rem;
+    margin-left: 5px;
+}
+
+.chooseOption{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    margin-top: 40px;
+}
+.chooseOption button{
+    height: 70px;
+    padding: 0px 40px;
+    border-radius: 9px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    cursor: pointer;
+    white-space: nowrap;
+    background: rgb(140, 141, 215);
+    border: 2px solid white;
+    transition: 0.2 all linear;
+}
+.stone:hover{
+    background: url(./image/rock.png);
+    background-size: cover;
+    background-position: center; 
+    border: none;
+    text-indent: -9999px; 
+    width: 149px;     
+}
+.paper:hover{
+    background: url(./image/paper.png);
+    background-size: cover;
+    background-position: center; 
+    border: none;
+    width: 146px;     
+}
+.scissor:hover{
+    background: url(./image/scissors.png);
+    background-size: cover;
+    background-position: center; 
+    border: none;
+    text-indent: -9999px; 
+    width: 182px;     
+}
+
+
+
+.shakeComputer{
+    animation: shakeComputer 0.9s linear;
+}
+.shakePlayer{
+    animation: shakePlayer 0.9s linear;
+}
+
+@keyframes shakeComputer{
+    0%{
+        transform: rotate(-30deg);
+    }
+    25%{
+        transform: rotate(30deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
+    75%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes shakePlayer{
+    0%{
+        transform: rotate(30deg);
+    }
+    25%{
+        transform: rotate(-30deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    75%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+
+
+@media (max-width:600px) {
+    
+    .player img{
+        height: 130px;
+        
+    }
+    .computer  img{
+        height: 130px;
+    }
+    h1{
+        font-size: 1.8rem;
+        margin-top: 90px;
+    }
+    .points{
+        font-size: 1.3rem;
+    }
+    .stone{
+        width: 182px;  
+        margin-bottom: 10px;        
+    }
+    .paper{
+        width: 182px;  
+        margin-bottom: 10px;        
+    }
+    .scissor{
+        width: 182px;     
+    }
+    .chooseOption{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .stone:hover{
+        width: 182px;  
+    }
+    .paper:hover{
+        width: 182px;  
+    }
+}
+
+
+
+
+
+
+
